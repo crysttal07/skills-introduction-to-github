@@ -1,0 +1,163 @@
+/* VARIABLES */
+:root {
+  --primary-color: #3c4f76;
+  --secondary-color: #7d8cc4;
+  --text-color: #000000;
+  --background-color: #cbc5ea;
+}
+
+/* BASE */
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  line-height: 1.5;
+  scroll-behavior: smooth;
+  margin: 0;
+}
+
+/* Header Section */
+header {
+  position: relative;
+  height: 300px;
+  background: url('IMG_0432.jpeg') no-repeat center center / cover; /* Replace with your landscape image */
+  color: #ffffff;
+}
+
+.header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(60, 79, 118, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+header p {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.down-arrow {
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 1.5em;
+  transition: transform 0.3s ease;
+}
+
+.down-arrow:hover {
+  transform: translateY(10px);
+}
+
+/* About Section */
+section {
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+#about img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-content p {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+  line-height: 1.5;
+}
+
+/* Skills */
+.skill {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  background: var(--secondary-color);
+  color: #fff;
+  font-size: 1em;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.skill:hover {
+  background: var(--primary-color);
+}
+
+/* Links */
+.link-button {
+  display: inline-block;
+  margin: 10px;
+  padding: 15px 30px;
+  background: var(--primary-color);
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2em;
+  border-radius: 5px;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.link-button:hover {
+  background: var(--secondary-color);
+  transform: scale(1.05);
+}
+
+/* Projects Carousel */
+.carousel-container {
+  position: relative;
+  width: 80%;
+  margin: 20px auto; /* Center the carousel and add some margin */
+  overflow: hidden;
+}
+
+.carousel-slide {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 100%; /* Ensure each item takes full width of the carousel */
+  box-sizing: border-box; /* Include padding and border in width/height calculations */
+}
+
+.carousel-item img {
+  width: 100%; /* Make the image responsive */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 5px; /* Optional: add rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add shadow for depth */
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1000; /* Ensure buttons are above other elements */
+}
+
+.carousel-button.left {
+  left: 10px; /* Position for the left button */
+}
+
+.carousel-button.right {
+  right: 10px; /* Position for the right button */
+}
